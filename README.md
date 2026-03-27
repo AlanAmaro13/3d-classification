@@ -208,26 +208,6 @@ With the current configuration:
 - **Test accuracy**: High binary classification performance (target > 99%)
 - **Loss**: Binary cross-entropy minimized to < 0.01
 
-## Customization
-
-### Modify Data Generation
-- Adjust deformation parameters in `pipeline()`
-- Change number of samples (currently 10,000)
-- Add new augmentation techniques
-- Modify voxel grid size (default 32×32×32)
-
-### Modify Model Architecture
-- Adjust filter sizes in `CNN_Model()`
-- Change kernel sizes and pooling strategies
-- Modify regularization parameters
-- Add/remove layers
-
-### Training Adjustments
-- Modify batch size and number of epochs
-- Change learning rate and optimizer
-- Add custom metrics (AUC, Precision, Recall, F1 Score)
-- Adjust patience for early stopping
-
 ## Notes
 
 - The project uses GPU acceleration when available (configured via `get_gpu(0)`)
@@ -235,12 +215,4 @@ With the current configuration:
 - Random seeds are set for consistent training
 - Model checkpoints save the best performing model based on validation loss
 
-## Future Improvements
 
-- Add more shape types (cylinders, toruses, etc.)
-- Implement data augmentation on-the-fly
-- Add 3D data visualization tools
-- Experiment with different architectures (ResNet3D, DenseNet3D)
-- Add ensemble methods for improved accuracy
-- Implement cross-validation
-- Add support for larger voxel grids (64×64×64, 128×128×128)
